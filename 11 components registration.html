@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<button-counter></button-counter>
+			<test></test>
+		</div>
+		
+		<script type="text/javascript">
+			// 组件名称也支持驼峰的方式，不过引用的时候只有 kebab-case 有效
+			Vue.component('ButtonCounter', {
+				props: ['title'],
+				data: function() {
+					return {}
+				},
+				template: '<div><h1>hi...hi</h1></div>',
+				methods: {
+					
+				}
+			})
+			var vm = new Vue({
+				el: "#app",
+				data: {
+					
+				},
+				methods: {
+				
+				},
+				// 局部注册
+				components: {
+					test:{
+						template: "<h2>test components</h2>"
+					}
+				}
+				
+			})
+			
+		</script>
+		
+	</body>
+</html>
